@@ -3,7 +3,12 @@ function! theme#init()
   let l:default = $COLORSCHEME_NAME
   let l:cache = s:theme_cache_file()
   if ! exists('g:colors_name')
-    set background=$BACKGROUND_COLOR
+    if $BACKGROUND_COLOR == 'dark'
+      set background=dark
+    else
+      set background=light
+    end
+
     let l:scheme = filereadable(l:cache) ? readfile(l:cache)[0] : l:default
     silent! execute 'colorscheme' l:scheme
   endif
