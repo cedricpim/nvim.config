@@ -1,0 +1,326 @@
+[
+  {
+    "repo": "Shougo/dein.vim",
+    "on_func": "dein#",
+    "comment": "Manage plugins"
+  },
+  {
+    "repo": "ryanoasis/vim-devicons",
+    "comment": "Add proper icons to files according to type"
+  },
+  {
+    "repo": "hardcoreplayers/spaceline.vim",
+    "on_event": [
+      "BufReadPre",
+      "BufNew"
+    ],
+    "hook_add": "let g:spaceline_seperate_style = 'arrow-fade'",
+    "comment": "Add airline to the bottom of the screen"
+  },
+  {
+    "repo": "hardcoreplayers/vim-buffet",
+    "on_event": [
+      "BufReadPre",
+      "BufNew"
+    ],
+    "comment": "Handle buffers as tabs"
+  },
+  {
+    "repo": "neoclide/coc.nvim",
+    "merge": 0,
+    "rev": "release",
+    "hook_add": "source $VIM_PATH/modules/module-coc.vim",
+    "hook_source": "source $VIM_PATH/modules/module-lsp.vim",
+    "comment": "Make VIM more IDE like"
+  },
+  {
+     "repo": "honza/vim-snippets",
+     "depends": "coc.nvim",
+     "comment": "Add snippets for several languages"
+  },
+  {
+    "repo": "Shougo/context_filetype.vim",
+    "comment": "Provide functions to find file type for blocks of code"
+  },
+  {
+    "repo": "MTDL9/vim-log-highlighting",
+    "on_ft": "log",
+    "comment": "Add highlight to log files"
+  },
+  {
+    "repo": "rhysd/vim-gfm-syntax",
+    "on_ft": "markdown",
+    "comment": "Add better support for Markdown"
+  },
+  {
+    "repo": "pechorin/any-jump.vim",
+    "on_cmd": "AnyJump",
+    "comment": "Jump to any definition or reference"
+  },
+  {
+    "repo": "liuchengxu/vim-clap",
+    "build": "bash install.sh",
+    "on_cmd": "Clap",
+    "hook_add": "source $VIM_PATH/modules/module-clap.vim",
+    "comment": "Better search for everything"
+  },
+  {
+    "repo": "vn-ki/coc-clap",
+    "on_source": "vim-clap",
+    "comment": "Better search for everything on CoC"
+  },
+  {
+    "repo": "lambdalisue/suda.vim",
+    "on_event": "BufRead",
+    "hook_add": "let g:suda_smart_edit = 1",
+    "comment": "Manage files that require sudo"
+  },
+  {
+    "repo": "ludovicchabant/vim-gutentags",
+    "if": "executable('ctags')",
+    "on_event": [
+      "BufReadPost",
+      "BufWritePost"
+    ],
+    "hook_source": "source $VIM_PATH/modules/module-gutentags.vim",
+    "comment": "Tag files"
+  },
+  {
+    "repo": "t9md/vim-choosewin",
+    "on_map": { "n": "<Plug>" },
+    "hook_source": "source $VIM_PATH/modules/module-choosewin.vim",
+    "comment": "Choose windows interactively"
+  },
+  {
+    "repo": "psliwka/vim-smoothie",
+    "on_func": "smoothie#",
+    "hook_add": "let g:smoothie_no_default_mappings = v:true",
+    "comment": "Better scrolling experience"
+  },
+  {
+    "repo": "simnalamburt/vim-mundo",
+    "on_map": { "n": "<Plug>" },
+    "comment": "Overview over vim history"
+  },
+  {
+    "repo": "liuchengxu/vim-which-key",
+    "on_cmd": [
+      "Whichkey",
+      "Whichkey!"
+    ],
+    "hook_add": "source $VIM_PATH/modules/module-whichkey.vim",
+    "hook_post_source": "source $VIM_PATH/modules/module-whichregister.vim",
+    "comment": "Add information about shortcuts"
+  },
+  {
+    "repo": "easymotion/vim-easymotion",
+    "on_map": { "n": "<Plug>" },
+    "hook_source": "source $VIM_PATH/modules/module-easymotion.vim",
+    "comment": "Improve motion on vim"
+  },
+  {
+    "repo": "Shougo/defx.nvim",
+    "on_cmd": "Defx",
+    "hook_source": "source $VIM_PATH/modules/module-defx.vim",
+    "comment": "File manager"
+  },
+  {
+    "repo": "kristijanhusak/defx-git",
+    "on_source": "defx.nvim",
+    "comment": "Add git status icons to file manager"
+  },
+  {
+    "repo": "kristijanhusak/defx-icons",
+    "on_source": "defx.nvim",
+    "comment": "Add devicons to file manager"
+  },
+  {
+    "repo": "voldikss/vim-floaterm",
+    "on_cmd": [
+      "FloatermNew",
+      "FloatermToggle",
+      "FloatermPrev",
+      "FloatermNext",
+      "FloatermSend"
+    ],
+    "hook_source": "source $VIM_PATH/modules/module-floaterm.vim",
+    "comment": "Add terminal to vim"
+  },
+  {
+    "repo": "jreybert/vimagit",
+    "on_cmd": "Magit",
+    "comment": "Add Git interface"
+  },
+  {
+    "repo": "rhysd/committia.vim",
+    "on_path": [
+      "COMMIT_EDITMSG",
+      "MERGE_MSG"
+    ],
+    "hook_source": "let g:committia_min_window_width = 7",
+    "comment": "Improve commit message screen"
+  },
+  {
+    "repo": "tpope/vim-fugitive",
+    "on_cmd": [
+      "G",
+      "Git",
+      "Gfetch",
+      "Gpush",
+      "Glog",
+      "Gclog",
+      "Gdiffsplit",
+      "Gread"
+    ],
+    "comment": "Add git commands"
+  },
+  {
+    "repo": "tyru/caw.vim",
+    "depends": "context_filetype.vim",
+    "on_map": { "nx": "<Plug>" },
+    "comment": "Add shortcuts for commenting code"
+  },
+  {
+    "repo": "liuchengxu/vista.vim",
+    "on_cmd": [
+      "Vista",
+      "Vista!",
+      "Vista!!"
+    ],
+    "hook_source": "source $VIM_PATH/modules/module-vista.vim",
+    "comment": "Display tags"
+  },
+  {
+    "repo": "luochen1990/rainbow",
+    "on_ft": [
+      "go",
+      "rust",
+      "python",
+      "c",
+      "cpp",
+      "html",
+      "css",
+      "yaml",
+      "ini",
+      "toml",
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "typescriptreact"
+    ],
+    "hook_source": "let g:rainbow_active = 1"
+  },
+  {
+    "repo": "junegunn/goyo.vim",
+    "on_cmd": "Goyo",
+    "hook_source": "source $VIM_PATH/modules/module-goyo.vim",
+    "comment": "Vim mode focused on writing"
+  },
+  {
+    "repo": "junegunn/Limelight.vim",
+    "on_cmd": "Limelight",
+    "comment": "Improve use of Goyo"
+  },
+  {
+    "repo": "machakann/vim-sandwich",
+    "on_map": { "vonx": "<Plug>(operator-sandwich-" },
+    "comment": "Add a couple of useful operators around text objects"
+  },
+  {
+    "repo": "AndrewRadev/splitjoin.vim",
+    "on_map": { "n": "<Plug>Splitjoin" },
+    "comment": "Create/Delete multi-line statements"
+  },
+  {
+    "repo": "AndrewRadev/dsf.vim",
+    "on_map": { "n": "<Plug>Dsf" },
+    "comment": "Delete surrounding function"
+  },
+  {
+    "repo": "kana/vim-textobj-function",
+    "on_map": { "ox": "<Plug>" },
+    "comment": "Create text objects for functions"
+  },
+  {
+    "repo": "terryma/vim-expand-region",
+    "on_map": { "x": "<Plug>" },
+    "comment": "Expand selected region through repeated sequence of keys"
+  },
+  {
+    "repo": "vimwiki/vimwiki",
+    "on_ft": "markdown",
+    "hook_add": "let g:vimwiki_list = [{'path': $VIM_WIKI, 'syntax': 'markdown', 'ext': '.md'}]",
+    "comment": "Personal wiki for vim"
+  },
+  {
+    "repo": "sheerun/vim-polyglot",
+    "comment": "Add syntax for multiple languages"
+  },
+  {
+
+    "repo": "tpope/vim-dispatch",
+    "comment": "tpope/vim-dispatch"
+  },
+  {
+    "repo": "radenling/vim-dispatch-neovim",
+    "depends": "vim-dispatch",
+    "comment": "Place dispatch as the main handler on neovim"
+
+  },
+  {
+    "repo": "cedricpim/vim-fetch",
+    "comment": "Open file on a given line"
+  },
+  {
+    "repo": "vim-ruby/vim-ruby",
+    "on_ft": "ruby",
+    "comment": "Configurations for ruby"
+  },
+  {
+    "repo": "tpope/vim-rails",
+    "on_ft": [
+      "ruby",
+      "rake"
+    ],
+    "comment": "Rails helpers"
+  },
+  {
+    "repo": "janko/vim-test",
+    "on_cmd": [
+      "TestNearest",
+      "TestFile",
+      "TestSuite",
+      "TestLast",
+      "TestVisit"
+    ],
+    "comment": "Vim wrapper for running tests"
+  },
+  {
+    "repo": "szw/vim-maximizer",
+    "hook_add": "source $VIM_PATH/modules/module-maximizer.vim",
+    "comment": "Maximize window"
+  },
+  {
+    "repo": "rust-lang/rust.vim",
+    "on_ft": "rust",
+    "comment": "Rust Helpers"
+  },
+  {
+    "repo": "tpope/vim-obsession",
+    "comment": "Store session for vim"
+  },
+  {
+    "repo": "cedricpim/vim-prosession",
+    "depends": "vim-obsession",
+    "hook_add": "let g:prosession_dir = $DATA_PATH . '/session/'",
+    "comment": "Continuously update vim session files"
+  },
+  {
+    "repo": "flazz/vim-colorschemes",
+    "comment": "Improve behaviour for text objects"
+  },
+  {
+    "repo": "flazz/vim-colorschemes",
+    "comment": "Add colorschemes"
+  }
+]
