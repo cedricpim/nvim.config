@@ -54,6 +54,9 @@ call utils#source_file($VIM_PATH, 'keybinds/plugins.vim')
 call utils#source_file($VIM_PATH, 'keybinds/general.vim')
 
 " Initialize user favorite colorscheme
+if !empty($COLORSCHEME_STYLE)
+  let g:material_style=$COLORSCHEME_STYLE
+endif
 call theme#init()
 
 set secure
