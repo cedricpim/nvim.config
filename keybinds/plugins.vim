@@ -217,7 +217,7 @@ function! s:load_clap() abort
   if dein#tap('vim-clap')
     nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
     nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
-    nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
+    nnoremap <silent> <Leader>fc :<C-u>Clap grep2<CR>
     "like emacs counsel-find-file
     nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
     nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<CR>
@@ -236,7 +236,7 @@ function! s:load_clap() abort
     if s:enable_whichkey
       let g:which_key_map.t.c = 'Change Colorscheme'
       let g:which_key_map.b.b = 'Buffer List'
-      let g:which_key_map.f.a = 'Find Word'
+      let g:which_key_map.f.c = 'Find Word'
       let g:which_key_map.f.f = 'Find File'
       let g:which_key_map.f.g = 'Find files with git'
       let g:which_key_map.f.w = 'Find current word'
@@ -245,6 +245,10 @@ function! s:load_clap() abort
       let g:which_key_map.f.l = 'Find locallist'
       let g:which_key_map.f.u = 'Find uncommitted files'
       let g:which_key_map.f.v = 'Find visual text'
+      let g:which_key_map.f.q = 'Find quickfix'
+      let g:which_key_map.f.r = 'Find registers'
+      let g:which_key_map.f.m = 'Find marks'
+      let g:which_key_map.f.t = 'Find tags'
     endif
   endif
 endfunction
