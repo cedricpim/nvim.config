@@ -228,6 +228,10 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
     nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
     nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
+    nnoremap <silent> <Leader>fq :<C-u>Clap quickfix<CR>
+    nnoremap <silent> <Leader>fr :<C-u>Clap registers<CR>
+    nnoremap <silent> <Leader>fm :<C-u>Clap marks<CR>
+    nnoremap <silent> <Leader>ft :<C-u>Clap tags<CR>
 
     if s:enable_whichkey
       let g:which_key_map.t.c = 'Change Colorscheme'
