@@ -220,9 +220,9 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
     "like emacs counsel-find-file
     nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
-    nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files --glob '!.git/**'<cr>
+    nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files -g '!.git/**' -g'!vendor/**'<CR>
     nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
-    nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
+    nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><CR>
     nnoremap <silent> <Leader>fh :<C-u>Clap history<CR>
     nnoremap <silent> <Leader>fW :<C-u>Clap windows<CR>
     nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
