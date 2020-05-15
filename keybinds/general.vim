@@ -45,14 +45,14 @@ function! s:load_normalmap() abort
   " Buffers movement and control
   nnoremap gp :bp<CR>
   nnoremap gn :bn<CR>
-  nnoremap <leader>x :bdelete<CR>
-  nnoremap <leader>n :enew<CR>
-  nnoremap <leader>X :%bd<CR>
+  nnoremap <leader>bd :bdelete<CR>
+  nnoremap <leader>bn :enew<CR>
+  nnoremap <leader>bx :%bd<CR>
 
   if s:enable_whichkey
-    let g:which_key_map.x = 'delete current buffer'
-    let g:which_key_map.n = 'create new buffer'
-    let g:which_key_map.X = 'delete all open buffers'
+    let g:which_key_map.b.d = 'delete current buffer'
+    let g:which_key_map.b.n = 'create new buffer'
+    let g:which_key_map.b.x = 'delete all open buffers'
   endif
 
   " Fold current block
