@@ -220,7 +220,7 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
     "like emacs counsel-find-file
     nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
-    nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files -g '!.git/**' -g'!vendor/**'<CR>
+    nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<CR>
     nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
     nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><CR>
     nnoremap <silent> <Leader>fh :<C-u>Clap history<CR>
@@ -228,7 +228,6 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
     nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
     nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
-    nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
 
     if s:enable_whichkey
       let g:which_key_map.t.c = 'Change Colorscheme'
@@ -242,7 +241,6 @@ function! s:load_clap() abort
       let g:which_key_map.f.l = 'Find locallist'
       let g:which_key_map.f.u = 'Find uncommitted files'
       let g:which_key_map.f.v = 'Find visual text'
-      let g:which_key_map.o.c = 'Open personal config'
     endif
   endif
 endfunction
