@@ -21,8 +21,8 @@ if has('patch-7.3.541')
 endif
 
 if has('vim_starting')
-	set encoding=utf-8
-	scriptencoding utf-8
+  set encoding=utf-8
+  scriptencoding utf-8
 endif
 
 " What to save for views and sessions:
@@ -30,19 +30,19 @@ set viewoptions=folds,cursor,curdir,slash,unix
 set sessionoptions=curdir,help,tabpages,winsize
 
 if has('clipboard')
-	set clipboard& clipboard+=unnamedplus
+  set clipboard& clipboard+=unnamedplus
 endif
 
 " Wildmenu
 " --------
 if has('wildmenu')
-	set wildignorecase
-	set wildignore+=.git,.hg,.svn,.stversions,*.pyc,*.spl,*.o,*.out,*~,%*
-	set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store
-	set wildignore+=**/node_modules/**,**/bower_modules/**,*/.sass-cache/*
-	set wildignore+=application/vendor/**,**/vendor/ckeditor/**,media/vendor/**
-	set wildignore+=__pycache__,*.egg-info,.pytest_cache,.mypy_cache/**
-	set wildcharm=<C-z>  " substitue for 'wildchar' (<Tab>) in macros
+  set wildignorecase
+  set wildignore+=.git,.hg,.svn,.stversions,*.pyc,*.spl,*.o,*.out,*~,%*
+  set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,tmp/**,*.DS_Store
+  set wildignore+=**/node_modules/**,**/bower_modules/**,*/.sass-cache/*
+  set wildignore+=application/vendor/**,**/vendor/ckeditor/**,media/vendor/**
+  set wildignore+=__pycache__,*.egg-info,.pytest_cache,.mypy_cache/**
+  set wildcharm=<C-z>  " substitue for 'wildchar' (<Tab>) in macros
 endif
 
 " Vim Directories
@@ -61,44 +61,44 @@ set spellfile=$VIM_PATH/spell/en.utf-8.add
 set history=2000
 
 if has('nvim')
-	set shada=!,'300,<50,@100,s10,h
+  set shada=!,'300,<50,@100,s10,h
 else
-	set viminfo='300,<10,@50,h,n$DATA_PATH/viminfo
+  set viminfo='300,<10,@50,h,n$DATA_PATH/viminfo
 endif
 
 augroup user_persistent_undo
-	autocmd!
-	au BufWritePre /tmp/*          setlocal noundofile
-	au BufWritePre COMMIT_EDITMSG  setlocal noundofile
-	au BufWritePre MERGE_MSG       setlocal noundofile
-	au BufWritePre *.tmp           setlocal noundofile
-	au BufWritePre *.bak           setlocal noundofile
+  autocmd!
+  au BufWritePre /tmp/*          setlocal noundofile
+  au BufWritePre COMMIT_EDITMSG  setlocal noundofile
+  au BufWritePre MERGE_MSG       setlocal noundofile
+  au BufWritePre *.tmp           setlocal noundofile
+  au BufWritePre *.bak           setlocal noundofile
 augroup END
 
 " If sudo, disable vim swap/backup/undo/shada/viminfo writing
 if $SUDO_USER !=# '' && $USER !=# $SUDO_USER && $HOME !=# expand('~'.$USER) && $HOME ==# expand('~'.$SUDO_USER)
-	set noswapfile
-	set nobackup
-	set noundofile
-	if has('nvim')
-		set shada="NONE"
-	else
-		set viminfo="NONE"
-	endif
+  set noswapfile
+  set nobackup
+  set noundofile
+  if has('nvim')
+    set shada="NONE"
+  else
+    set viminfo="NONE"
+  endif
 endif
 
 " Secure sensitive information, disable backup files in temp directories
 if exists('&backupskip')
-	set backupskip+=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*
-	set backupskip+=.vault.vim
+  set backupskip+=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*
+  set backupskip+=.vault.vim
 endif
 
 " Disable swap/undo/viminfo/shada files in temp directories or shm
 augroup user_secure
-	autocmd!
-	silent! autocmd BufNewFile,BufReadPre
-		\ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim
-		\ setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada=
+  autocmd!
+  silent! autocmd BufNewFile,BufReadPre
+    \ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim
+    \ setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada=
 augroup END
 
 " Tabs and Indents
@@ -115,7 +115,7 @@ set shiftround      " Round indent to multiple of 'shiftwidth'
 set scrolloff=5     " Keep some space before reaching bottom of file
 
 if exists('&breakindent')
-	set breakindentopt=shift:2,min:20
+  set breakindentopt=shift:2,min:20
 endif
 
 " Timing
@@ -138,12 +138,12 @@ set hlsearch      " Highlight search results
 set complete=.,w,b,k  " C-n completion: Scan buffers, windows and dictionary
 
 if exists('+inccommand')
-	set inccommand=nosplit
+  set inccommand=nosplit
 endif
 
 if executable('rg')
-	set grepformat=%f:%l:%m
-	let &grepprg = 'rg --vimgrep' . (&smartcase ? ' --smart-case' : '')
+  set grepformat=%f:%l:%m
+  let &grepprg = 'rg --vimgrep' . (&smartcase ? ' --smart-case' : '')
 endif
 
 " Behavior
@@ -161,13 +161,13 @@ set completeopt=menu,menuone    " Always show menu, even for one item
 set completeopt+=noselect,noinsert
 
 if exists('+completepopup')
-	set completeopt+=popup
-	set completepopup=height:4,width:60,highlight:InfoPopup
+  set completeopt+=popup
+  set completepopup=height:4,width:60,highlight:InfoPopup
 endif
 
 if has('patch-8.1.0360') || has('nvim-0.4')
-	set diffopt+=internal,algorithm:patience
-	" set diffopt=indent-heuristic,algorithm:patience
+  set diffopt+=internal,algorithm:patience
+  " set diffopt=indent-heuristic,algorithm:patience
 endif
 
 " Editor UI
@@ -213,15 +213,15 @@ set laststatus=2        " Always show a status line
 set display=lastline
 
 if has('folding') && has('vim_starting')
-	set nofoldenable " do not immediately fold when opening a file
-	set foldmethod=indent
-	set foldlevelstart=99
+  set nofoldenable " do not immediately fold when opening a file
+  set foldmethod=indent
+  set foldlevelstart=99
 endif
 
 if has('nvim-0.4')
-	set signcolumn=yes:1
+  set signcolumn=yes:1
 else
-	set signcolumn=yes           " Always show signs column
+  set signcolumn=yes           " Always show signs column
 endif
 
 if exists('+previewpopup')
@@ -230,10 +230,10 @@ endif
 
 " Pseudo-transparency for completion menu and floating windows
 if &termguicolors
-	if exists('&pumblend')
-		set pumblend=10
-	endif
-	if exists('&winblend')
-		set winblend=10
-	endif
+  if exists('&pumblend')
+    set pumblend=10
+  endif
+  if exists('&winblend')
+    set winblend=10
+  endif
 endif
