@@ -27,7 +27,7 @@ endif
 
 " What to save for views and sessions:
 set viewoptions=folds,cursor,curdir,slash,unix
-set sessionoptions=curdir,help,tabpages,winsize
+set sessionoptions=curdir,help,tabpages,winsize,buffers
 
 if has('clipboard')
   set clipboard& clipboard+=unnamedplus
