@@ -98,8 +98,8 @@ function! s:load_commandmap() abort
   cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 endfunction
 
-function! s:load_quietmap() abort
-  function! s:QuiteVim() abort
+function! s:load_quitmap() abort
+  function! s:QuitVim() abort
     if empty(expand('%:t'))
       execute ":q"
     else
@@ -107,14 +107,14 @@ function! s:load_quietmap() abort
     endif
   endfunction
 
-  " Quiet
-  nnoremap <leader>qq :call <SID>QuiteVim()<CR>
-  nnoremap <leader>qr <esc>:q!<CR>
+  " Quit
+  nnoremap <leader>qq :call <SID>QuitVim()<CR>
+  nnoremap <leader>qw <esc>:q!<CR>
 
   if s:enable_whichkey
-    let g:which_key_map.q = { 'name': '+quiet'}
-    let g:which_key_map.q.q = 'Quiet with save'
-    let g:which_key_map.q.r = 'Quiet without save (rage)'
+    let g:which_key_map.q = { 'name': '+quit'}
+    let g:which_key_map.q.q = 'Quit with save'
+    let g:which_key_map.q.w = 'Quit without save'
   endif
 endfunction
 
@@ -170,7 +170,7 @@ endfunction
 let s:modes = {
   \ 'insertmap': 'insert',
   \ 'commandmap': 'command',
-  \ 'quietmap': 'quiet',
+  \ 'quitmap': 'quit',
   \ 'windowmap': 'window',
   \ 'normalmap': 'normal',
   \ 'visualmap': 'visual'
