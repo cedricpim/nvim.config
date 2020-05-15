@@ -243,7 +243,6 @@
   },
   {
     "repo": "vimwiki/vimwiki",
-    "on_ft": "markdown",
     "hook_add": "let g:vimwiki_list = [{'path': $VIM_WIKI, 'syntax': 'markdown', 'ext': '.md'}]",
     "comment": "Personal wiki for vim"
   },
