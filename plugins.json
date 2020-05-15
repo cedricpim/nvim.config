@@ -9,12 +9,12 @@
     "comment": "Add proper icons to files according to type"
   },
   {
-    "repo": "hardcoreplayers/spaceline.vim",
+    "repo": "vim-airline/vim-airline",
     "on_event": [
       "BufReadPre",
       "BufNew"
     ],
-    "hook_add": "let g:spaceline_seperate_style = 'arrow-fade'",
+    "hook_add": "source $VIM_PATH/modules/module-airline.vim",
     "comment": "Add airline to the bottom of the screen"
   },
   {
