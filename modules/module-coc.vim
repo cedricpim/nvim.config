@@ -3,27 +3,27 @@ let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =[
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-vimlsp',
-    \ 'coc-snippets',
-    \ 'coc-emmet',
-    \ 'coc-pairs',
-    \ 'coc-json',
-    \ 'coc-highlight',
-    \ 'coc-git',
-    \ 'coc-emoji',
-    \ 'coc-project',
-    \ 'coc-lists',
-    \ 'coc-stylelint',
-    \ 'coc-yaml',
-    \ 'coc-tabnine',
-    \ 'coc-gitignore',
-    \ 'coc-yank',
-    \ 'coc-explorer',
-    \ 'coc-actions',
-    \ 'coc-db',
-    \]
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-vimlsp',
+  \ 'coc-snippets',
+  \ 'coc-emmet',
+  \ 'coc-pairs',
+  \ 'coc-json',
+  \ 'coc-highlight',
+  \ 'coc-git',
+  \ 'coc-emoji',
+  \ 'coc-project',
+  \ 'coc-lists',
+  \ 'coc-stylelint',
+  \ 'coc-yaml',
+  \ 'coc-tabnine',
+  \ 'coc-gitignore',
+  \ 'coc-yank',
+  \ 'coc-explorer',
+  \ 'coc-actions',
+  \ 'coc-db',
+\]
 
 augroup MyAutoCmd
   autocmd!
