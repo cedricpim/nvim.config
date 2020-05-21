@@ -10,7 +10,6 @@ let g:coc_global_extensions =[
   \ 'coc-emmet',
   \ 'coc-pairs',
   \ 'coc-json',
-  \ 'coc-highlight',
   \ 'coc-git',
   \ 'coc-emoji',
   \ 'coc-project',
