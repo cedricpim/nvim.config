@@ -17,13 +17,6 @@ augroup user_plugin_filetype
         \ |   filetype detect
         \ | endif
 
-  " Highlight current line only on focused window
-  autocmd WinEnter,InsertLeave * if &ft !~# '^\(denite\|clap_\)' |
-    \ set cursorline | endif
-
-  autocmd WinLeave,InsertEnter * if &ft !~# '^\(denite\|clap_\)' |
-    \ set nocursorline | endif
-
   " Automatically set read-only for files being edited elsewhere
   autocmd SwapExists * nested let v:swapchoice = 'o'
 
