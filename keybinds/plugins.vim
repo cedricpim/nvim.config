@@ -73,8 +73,11 @@ endfunction
 
 function! s:load_any_jump() abort
   if dein#tap('any-jump.vim')
+    nnoremap <silent> <Leader>fj :AnyJump<CR>
+    xnoremap <silent> <Leader>fj :AnyJump<CR>
+
     if s:enable_whichkey
-      let g:which_key_map.c.j ='Show definition references'
+      let g:which_key_map.f.j ='Show definition references'
     endif
   endif
 endfunction
