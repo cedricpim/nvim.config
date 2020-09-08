@@ -73,6 +73,9 @@ function! s:load_normalmap() abort
 
   " Clear search highlights
   nmap <silent> <leader>/ :nohlsearch<CR>
+
+  " Show git shortlog for current file
+  map <F2> :!git shortlog -s -n %<CR>
 endfunction
 
 function! s:load_insertmap() abort
