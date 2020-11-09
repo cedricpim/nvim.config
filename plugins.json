@@ -18,11 +18,12 @@
     "comment": "Add airline to the bottom of the screen"
   },
   {
-    "repo": "hardcoreplayers/vim-buffet",
+    "repo": "bagrat/vim-buffet",
     "on_event": [
       "BufReadPre",
       "BufNew"
     ],
+    "hook_add": "source $VIM_PATH/modules/module-buffet.vim",
     "comment": "Handle buffers as tabs"
   },
   {
