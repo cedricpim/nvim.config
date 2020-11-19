@@ -35,9 +35,14 @@
     "comment": "Make VIM more IDE like"
   },
   {
-     "repo": "honza/vim-snippets",
-     "depends": "coc.nvim",
-     "comment": "Add snippets for several languages"
+    "repo": "dense-analysis/ale",
+    "hook_add": "source $VIM_PATH/modules/module-ale.vim",
+    "comment": "Use better linting"
+  },
+  {
+    "repo": "honza/vim-snippets",
+    "depends": "coc.nvim",
+    "comment": "Add snippets for several languages"
   },
   {
     "repo": "Shougo/context_filetype.vim",
