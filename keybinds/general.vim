@@ -10,6 +10,10 @@ function! s:load_visualmap() abort
   " On visual mode, use tab and shift tab to indent the current selected text
   vnoremap <Tab> >gv
   vnoremap <S-Tab> <gv
+
+  " Move visual selection
+  vnoremap J :m '>+1<CR>gv=gv
+  vnoremap K :m '<-2<CR>gv=gv
 endfunction
 
 function! s:load_normalmap() abort
