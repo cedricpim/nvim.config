@@ -12,8 +12,8 @@ function! s:load_visualmap() abort
   vnoremap <S-Tab> <gv
 
   " Move visual selection
-  vnoremap J :m '>+1<CR>gv=gv
-  vnoremap K :m '<-2<CR>gv=gv
+  vnoremap <C-J> :m '>+1<CR>gv=gv
+  vnoremap <C-K> :m '<-2<CR>gv=gv
 endfunction
 
 function! s:load_normalmap() abort
