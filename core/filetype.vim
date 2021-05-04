@@ -59,6 +59,9 @@ augroup user_plugin_filetype
     autocmd InsertEnter * :setlocal norelativenumber
     autocmd InsertLeave * :setlocal relativenumber
   augroup END
+
+  " Use pandoc to read all sorts of files
+  autocmd BufReadPost *.doc,*.docx,*.epub,*.rtf,*.odp,*.odt silent %!pandoc "%" -tplain -o /dev/stdout
 augroup END
 
 " Credits: https://github.com/Shougo/shougo-s-github/blob/master/vim/rc/options.rc.vim#L147
