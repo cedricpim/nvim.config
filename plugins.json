@@ -84,6 +84,7 @@
   {
     "repo": "ludovicchabant/vim-gutentags",
     "if": "executable('ctags')",
+    "lazy": "v:true",
     "on_event": [
       "BufReadPost",
       "BufWritePost"
@@ -314,10 +315,6 @@
     "depends": "vim-obsession",
     "hook_add": "let g:prosession_dir = $DATA_PATH . '/session/'",
     "comment": "Continuously update vim session files"
-  },
-  {
-    "repo": "flazz/vim-colorschemes",
-    "comment": "Improve behaviour for text objects"
   },
   {
     "repo": "flazz/vim-colorschemes",
