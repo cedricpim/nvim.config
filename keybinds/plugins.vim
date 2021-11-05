@@ -364,7 +364,7 @@ function! s:load_defx() abort
     nnoremap <silent> <Leader>e
       \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
     nnoremap <silent> <C-e>
-      \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
+      \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search-recursive=`expand('%:p')`<CR>
 
     if s:enable_whichkey
       let g:which_key_map.e = 'Open defx'
