@@ -323,5 +323,9 @@
   {
     "repo": "hzchirs/vim-material",
     "comment": "Matherial theme"
+  },
+  {
+    "repo": "danth/pathfinder.vim",
+    "comment": "Motion tips"
   }
 ]

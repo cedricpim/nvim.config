@@ -22,6 +22,8 @@ let g:loaded_netrwPlugin = 1
 let g:loaded_netrwSettings = 1
 let g:loaded_netrwFileHandlers = 1
 
+let g:python3_host_prog = "/usr/bin/python"
+
 " Initialize base requirements
 if has('vim_starting')
   " Global Mappings "{{{
