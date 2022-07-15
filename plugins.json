@@ -323,5 +323,9 @@
   {
     "repo": "hzchirs/vim-material",
     "comment": "Matherial theme"
+  },
+  {
+    "repo": "andymass/vim-matchup",
+    "comment": "Enhance matching features"
   }
 ]
