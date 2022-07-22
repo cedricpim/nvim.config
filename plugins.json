@@ -327,5 +327,10 @@
   {
     "repo": "andymass/vim-matchup",
     "comment": "Enhance matching features"
+  },
+  {
+    "repo": "wfxr/minimap.vim",
+    "hook_add": "source $VIM_PATH/modules/module-minimap.vim",
+    "comment": "Add minimap to files"
   }
 ]
