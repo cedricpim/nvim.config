@@ -332,5 +332,13 @@
     "repo": "wfxr/minimap.vim",
     "hook_add": "source $VIM_PATH/modules/module-minimap.vim",
     "comment": "Add minimap to files"
+  },
+  {
+    "repo": "tpope/vim-repeat",
+    "comment": "Repeat.vim remaps . in a way that plugins can tap into it."
+  },
+  {
+    "repo": "ggandor/leap.nvim",
+    "comment": "Leap is a general-purpose motion plugin"
   }
 ]
